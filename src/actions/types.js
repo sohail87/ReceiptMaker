@@ -1,0 +1,1 @@
+export const CREATE_RECEIPT = 'CREATE_RECEIPT'
