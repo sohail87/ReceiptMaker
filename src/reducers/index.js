@@ -1,16 +1,10 @@
-import * as ActionTypes from '../actions/types'
+import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form';
+import ReceiptsReducer from './reducer_receipts';
 
-const initialState = {
+const rootReducer = combineReducers({
+  receipts: ReceiptsReducer,
+  form: formReducer
+});
 
-}
-
-export default (state = initialState, action) => {
-  switch (action.type) {
-
-  case ActionTypes.CREATE_RECEIPT:
-    return { ...state, [action.payload.id]:action.payload }
-
-  default:
-    return state
-  }
-}
+export default rootReducer;
