@@ -1,6 +1,9 @@
-import * as ActionTypes from 'types.js'
+import * as ActionTypes from './types'
 
-export const createReceipt = (values) => ({
-  type: ActionTypes.CREATE_RECEIPT,
-  payload: payload
-})
+export function createReceipt (values, callback) {
+  callback();
+  return {
+    type: ActionTypes.CREATE_RECEIPT,
+    payload: values
+  }
+}
